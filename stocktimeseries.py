@@ -14,7 +14,7 @@ st.title('AI Stock Forecaster App')
 
 #Forecasting for 30 Stocks
 
-stocks = ('GOOG','DIS','PACW','HOOD','GT','U','TLRY','BYND','SONO','APP','SBFM','BE','BABA','CRSR', 'JAGX','POLA','TTD','ZURA','PTON','BBIG','JD','PSNY'.'META','IBRX','CIX.TO','WAL','MAXN','PFE','MANU')
+stocks = ('GOOG','DIS','PACW','HOOD','GT','U','TLRY','BYND','SONO','APP','SBFM','BE','BABA','CRSR','JAGX','POLA','TTD','ZURA','PTON','BBIG','JD','PSNY','META','IBRX','CIX.TO','WAL','MAXN','PFE','MANU')
 	  
 selected_stock = st.selectbox('Select dataset for prediction', stocks)
 
