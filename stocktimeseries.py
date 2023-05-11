@@ -12,9 +12,9 @@ TODAY = date.today().strftime("%Y-%m-%d")
 
 # Streamlit Dashboard          
 st.set_page_config(page_title ="Woods and Pop Ltd", page_icon =":guardsman:", layout ="centered")
-st.image("logo.jpeg", width = 500)
+st.image("logo.jpeg", width = 600)
 st.title('AI Stock Forecaster App')
-st.subheader("Historical Data Analysis")
+st.subheader("Historical Data Analysis of the selected Stock")
 
 #Forecasting for 30 Stocks
 
