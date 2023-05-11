@@ -10,7 +10,11 @@ from plotly import graph_objs as go
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
+# Streamlit Dashboard          
+st.set_page_config(page_title ="Woods and Pop Ltd", page_icon =":guardsman:", layout ="wide")
+st.image("logo.jpeg", width = 300)
 st.title('AI Stock Forecaster App')
+st.subheader("Historical Data Analysis")
 
 #Forecasting for 30 Stocks
 
