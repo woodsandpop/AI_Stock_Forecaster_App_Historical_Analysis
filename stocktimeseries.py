@@ -37,7 +37,7 @@ data_load_state = st.text('Loading data...')
 data = load_data(selected_stock)
 data_load_state.text('Loading data... done!')
 
-st.subheader('Raw data')
+st.subheader('Downloaded Raw Data of the selected stock')
 st.write(data.tail())
 
 # Plot raw data
@@ -45,7 +45,7 @@ def plot_raw_data():
 	fig = go.Figure()
 	fig.add_trace(go.Scatter(x=data['Date'], y=data['Open'], name="stock_open"))
 	fig.add_trace(go.Scatter(x=data['Date'], y=data['Close'], name="stock_close"))
-	fig.layout.update(title_text='Time Series data with Rangeslider', xaxis_rangeslider_visible=True)
+	fig.layout.update(title_text='Time Series data analysis with Rangeslider', xaxis_rangeslider_visible=True)
 	st.plotly_chart(fig)
 	
 plot_raw_data()
@@ -60,13 +60,13 @@ future = m.make_future_dataframe(periods=period)
 forecast = m.predict(future)
 
 # Show and plot forecast
-st.subheader('Forecast data')
+st.subheader('Forecasted data of the selected stock')
 st.write(forecast.tail())
     
-st.write(f'Forecast plot for {n_years} years')
+st.write(f'Forecasted plot for {n_years} years')
 fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
 
-st.write("Forecast components")
-fig2 = m.plot_components(forecast)
+st.write("Forecasted components")
+fig2 = m.plot_components(forecasted)
 st.write(fig2)
