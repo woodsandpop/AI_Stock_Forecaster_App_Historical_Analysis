@@ -19,7 +19,8 @@ st.subheader("Historical Data Analysis of the selected Stock")
 
 #Forecasting for 30 Stocks
 
-stocks = ('GOOGL','DIS','PACW','HOOD','GT','U','TLRY','BYND','SONO','APP','SBFM','BE','BABA','CRSR','JAGX','POLA','TTD','ZURA','PTON','BBIG','JD','PSNY','META','IBRX','CIX.TO','WAL','MAXN','PFE','MANU')
+stocks = ('GOOGL','DIS','PACW','HOOD','GT','U','TLRY','BYND','SONO','APP','SBFM','BE','BABA','CRSR',
+	  'JAGX','POLA','TTD','ZURA','PTON','BBIG','JD','PSNY','META','IBRX','CIX.TO','WAL','MAXN','PFE','MANU')
 	  
 selected_stock = st.selectbox('Select dataset for prediction', stocks)
 
@@ -75,4 +76,5 @@ st.write("Forecasted components")
 fig2 = m.plot_components(forecast)
 st.write(fig2)
 
-st.write('STOCK TRADING IS INHERENTLY RISKY AND THE USERS AGREE TO ASSUME COMPLETE AND FULL RESPONSIBILITY FOR THE OUTCOMES OF ALL TRADING DECISIONS THAT THEY MAKE, INCLUDING BUT NOT LIMITED TO LOSS OF CAPITAL.
+st.write('STOCK TRADING IS INHERENTLY RISKY AND THE USERS AGREE TO ASSUME COMPLETE AND FULL RESPONSIBILITY FOR THE OUTCOMES OF ALL TRADING DECISIONS 
+	 THAT THEY MAKE, INCLUDING BUT NOT LIMITED TO LOSS OF CAPITAL.')
