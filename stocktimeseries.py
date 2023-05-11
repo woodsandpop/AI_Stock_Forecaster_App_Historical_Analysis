@@ -39,7 +39,9 @@ data = load_data(selected_stock)
 data_load_state.text('Loading data... done!')
 
 st.subheader('Downloaded Raw Data of the selected stock')
-st.write('“ds” indicates the Date data, “yhat” indicates the predicted time series data. “yhat_lower” and “yhat_upper” indicate the probable lower and upper limit of how much the value can go.')
+st.write('“ds” indicates the Date of the stock data')
+st.write('“yhat” indicates the predicted time series data')
+st.write('“yhat_lower” and “yhat_upper” indicate the probable lower and upper limit of how much the value can go')
 st.write(data.tail())
 
 # Plot raw data
