@@ -40,9 +40,6 @@ data = load_data(selected_stock)
 data_load_state.text('Loading data... done!')
 
 st.subheader('Downloaded Raw Data of the selected stock')
-st.write('“ds” indicates the Date of the stock data')
-st.write('“yhat” indicates the predicted time series data')
-st.write('“yhat_lower” & “yhat_upper” indicate the probable lower & upper limit of how much the value can go')
 st.write(data.tail())
 
 # Plot raw data
@@ -66,6 +63,9 @@ forecast = m.predict(future)
 
 # Show and plot forecast
 st.subheader('Forecasted data of the selected stock')
+st.write('“ds” indicates the Date of the stock data')
+st.write('“yhat” indicates the predicted time series data')
+st.write('“yhat_lower” & “yhat_upper” indicate the probable lower & upper limit of how much the value can go')
 st.write(forecast.tail())
     
 st.write(f'Forecasted plot for {n_years} years')
